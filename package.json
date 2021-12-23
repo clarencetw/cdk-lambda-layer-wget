@@ -1,5 +1,6 @@
 {
   "name": "cdk-lambda-layer-wget",
+  "description": "Lambda Layer for wget",
   "repository": {
     "type": "git",
     "url": "https://github.com/clarencetw/cdk-lambda-layer-wget.git"
