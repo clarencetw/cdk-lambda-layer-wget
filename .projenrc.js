@@ -5,6 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   name: 'cdk-lambda-layer-wget',
+  description: 'Lambda Layer for wget',
   repositoryUrl: 'https://github.com/clarencetw/cdk-lambda-layer-wget.git',
   keywords: ['aws', 'cdk', 'wget'],
 
