@@ -9,6 +9,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/clarencetw/cdk-lambda-layer-wget.git',
   keywords: ['aws', 'cdk', 'wget'],
 
+  /**
+   * we default release the main branch(cdkv2) with major version 2.
+   */
+  majorVersion: 2,
+  defaultReleaseBranch: 'main',
+  /**
+    * we also release the cdkv1 branch with major version 1.
+    */
+  releaseBranches: {
+    cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
+  },
+
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
