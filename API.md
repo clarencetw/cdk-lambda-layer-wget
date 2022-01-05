@@ -16,14 +16,14 @@ new WgetLayer(scope: Construct, id: string)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`scope`](#cdklambdalayerwgetwgetlayerparameterscope)<span title="Required">*</span> | [`constructs.Construct`](#constructs.Construct) | *No description.* |
+| [`scope`](#cdklambdalayerwgetwgetlayerparameterscope)<span title="Required">*</span> | [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct) | *No description.* |
 | [`id`](#cdklambdalayerwgetwgetlayerparameterid)<span title="Required">*</span> | `string` | *No description.* |
 
 ---
 
 ##### `scope`<sup>Required</sup> <a name="cdk-lambda-layer-wget.WgetLayer.parameter.scope" id="cdklambdalayerwgetwgetlayerparameterscope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
+- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
 
 ---
 
