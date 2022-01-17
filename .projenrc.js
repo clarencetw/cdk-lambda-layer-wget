@@ -21,7 +21,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
   },
 
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['clarencetw'],
