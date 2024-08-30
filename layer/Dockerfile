@@ -4,7 +4,7 @@ FROM public.ecr.aws/lambda/provided:latest
 # versions
 #
 
-ARG WGET_VERSION=1.21.2
+ARG WGET_VERSION=1.21.4
 ARG NETTLE_VERSION=3.6
 
 USER root
@@ -15,10 +15,9 @@ WORKDIR /tmp
 # tools
 #
 
-RUN yum update -y \
-    && yum install -y make automake gcc gcc-c++ \
-    && yum install -y openssl-devel gnutls-devel \
-    && yum install -y zip unzip wget tar gzip
+RUN dnf install -y make automake gcc gcc-c++ \
+    && dnf install -y openssl-devel gnutls-devel \
+    && dnf install -y zip unzip wget tar gzip
 
 #
 # nettle
