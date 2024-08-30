@@ -6,6 +6,7 @@ FROM public.ecr.aws/lambda/provided:latest
 
 ARG WGET_VERSION=1.21.4
 ARG NETTLE_VERSION=3.6
+ARG PCRE_VERSION=8.45
 
 USER root
 RUN mkdir -p /opt
@@ -18,6 +19,15 @@ WORKDIR /tmp
 RUN dnf install -y make automake gcc gcc-c++ \
     && dnf install -y openssl-devel gnutls-devel \
     && dnf install -y zip unzip wget tar gzip
+
+#
+# pcre 
+#
+
+RUN wget https://ftp.exim.org/pub/pcre/pcre-${PCRE_VERSION}.tar.gz
+RUN tar -xzvf pcre-${PCRE_VERSION}.tar.gz
+RUN cd pcre-${PCRE_VERSION} && ./configure --prefix=/opt && make && make install \
+    && chmod -v 755 /opt/lib/libpcre.so.1
 
 #
 # nettle
